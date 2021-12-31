@@ -7,15 +7,28 @@
     <title>Document</title>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
 </head>
-<body>
-    
-    <div ng-app="" ng-init="name='sagar chavada'">
-        <!-- name : <input type="text" ng-model="name">
-        <h1 ng-bind="name"></h1> -->
+<body ng-app="myapp" ng-controller="controller">
+    <h1>
+        {{
+          name + lastname    
+        }}
+    </h1>
+
+    <script>
+        var myapp = angular.module('myapp',[]);
+
+        myapp.controller('controller',function($scope){
+            $scope.name = "ram";
+            $scope.lastname = "sharma";
+        });
 
 
-        <!-- <h1 ng-bind="name"></h1> -->
-
-    </div>
+        myapp.directive("hello",function(){
+            // return alert("my name is dire like constructor");
+            return {
+                template : "i was made"
+            } ;
+        });
+    </script>
 </body>
 </html>
