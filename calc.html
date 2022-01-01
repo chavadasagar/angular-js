@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <title>calc</title>
+</head>
+<body>
+    
+    <div class="calc" ng-app="calc" ng-controller="con">
+        <input type="number" ng-model="n1">
+        <!-- <input type="text" ng-model="op"> -->
+        <input type="number" ng-model="n2">
+
+        {{result}}
+
+    </div>
+    
+    <script>
+        var cal = angular.module("calc",[]);
+        
+        cal.controller("con",function($scope){
+            $scope.result = n1+n2;
+        });
+        
+        
+
+    </script>
+
+</body>
+</html>
