@@ -9,12 +9,28 @@
 </head>
 <body>
     
-    <form action="" ng-app="">
+    <form action="" ng-app="mod" ng-controller="con">
         <input type="text" placeholder="name" ng-model="nm">
-        <h1>one</h1>
         
-        {{nm}}
+        <h1  ng-repeat="x in arr">
+            {{
+                x
+            }}
+        </h1>
     </form>
+
+    <script>
+        var mod = angular.module("mod",[]);
+
+        mod.controller("con",function($scope){
+            $scope.sagar = "sagar";
+            
+
+
+            $scope.arr = ['sagar','ram','rahul','kam'];
+        });
+
+    </script>
 
 </body>
 </html>
